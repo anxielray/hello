@@ -1,9 +1,10 @@
 #!/bin/bash
 
+source lib/greeter.sh
 
-# Default is World
-# Author: Raymond Ogwel <anxielray@github.com>
-# Email: anxielworld@gmail.com
-name=${1:-"World"}
+name="$1"
+if [ -z "$name" ]; then
+    name="World"
+fi
 
-echo "Hello, $name"
+Greeter "$name"
